@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gauooravle</title>
+
+    <style>
+        #links{
+            margin-left: 800px;
+            overflow: hidden;
+        }
+
+
+        #links a{
+            color: black;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            float: right;
+
+            font-weight: bold;
+        }
+
+        #links a:hover{
+            background-color: cadetblue;
+        }
+
+        #doodle{
+            margin-left: 500px;
+            margin-top: 100px;
+        }
+
+        #doodle > img{
+            height: 250px;
+            
+        }
+
+        #searcher{
+            margin-left: 600px;
+            margin-top: 25px;
+        }
+
+        #searcher input{
+            margin-left: 25px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        #searcher span{
+            size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="links">
+            <a href="mysearch_images.html">images</a>
+            <a href="mysearch.html">normal search</a> 
+    </div>
+
+    <div id="doodle">
+        <img src="download.png" alt="troll_face" >
+    </div>
+
+    <div id="searcher">
+        <form action="https://www.google.com/search" >
+            <span>pages with… “all these words:</span> <input type="text" name="as_q">
+            <br>
+            <span>pages with… “this exact word or phrase:</span><input type="text" name="as_epq">
+            <br>
+            <span>pages with… “any of these words:</span><input type="text" name="as_oq" >
+            <br>
+            <span>pages with… “none of these words:</span><input type="text" name="as_eq" >
+            <br>
+            <input type="submit" value="search">
+        </form>
+    </div>
+</body>
+</html>

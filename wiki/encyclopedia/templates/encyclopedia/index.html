@@ -10,6 +10,8 @@
     <ul>
         {% for entry in entries %}
             <li>{{ entry }}</li>
+        {% empty %}
+            <li>No entry</li>
         {% endfor %}
     </ul>
 

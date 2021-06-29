@@ -11,7 +11,7 @@ import markdown
 md = markdown.Markdown()
 
 def index(request):
-    return render(request, "encyclopedia\templates\encyclopedia\entry.html", {
+    return render(request, "encyclopedia\index.html", {
         "entries": util.list_entries()
     })
 
@@ -19,19 +19,18 @@ def index(request):
 def entry(request,title):
     entries = util.list_entries()
     if title not in entries:
-        return render(request, "encylopedia/error.html",{
+        return render(request, "encyclopedia/error.html",{
             "title":title,
             "message":"No such entry exits!"
         })
         
-    content = util.get_entry(title)     # gets markdown as it is
-    content = md.convert(content)       # converts markdown to HTML
+    page = util.get_entry(title)
+    page_converted = md.convert(page) 
 
-    print(content)
     context = {
-        "title":title,
-        "content":content,
+        'page': page_converted,
+        'title': title,
     }
 
-    return render(request, "encycopedia/entry.html",context)
+    return render(request, "encyclopedia/entry.html", context)
     

@@ -6,8 +6,13 @@
 
 {% block body %}
 
-<div>
-    <h1>{{message}}</h1>
-</div>
+    <div>
+        <h1>{{message}}</h1>
+    </div>
+    
+    
+    <div>
+        <a href="{% url 'index' %}">Back to home page</a>
+    </div>
 
 {% endblock %}

@@ -5,7 +5,12 @@
 {% endblock %}
 
 {% block body %}
+    <h1>{{ entry }}</h1>
     <div>
         {{ page|safe }}
+    </div>
+
+    <div>
+        <a href="{% url 'index' %}">Back to home page</a>
     </div>
 {% endblock %}
